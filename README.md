@@ -1,4 +1,4 @@
-# 开发环境https配置模板
+# 开发环境localhost https和反向代理配置模板
 
 
 1. localhost.sh 自签名证书生成脚本。
