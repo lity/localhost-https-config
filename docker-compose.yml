@@ -2,10 +2,12 @@ version: '3.7'
 
 services:
   nginx:
-    restart: always
+    restart: unless-stopped
     image: nginx:latest
     network_mode: host
     volumes:
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
       - ./log:/var/log/nginx
       - ./localhost.crt:/etc/nginx/localhost.crt
       - ./localhost.key:/etc/nginx/localhost.key
