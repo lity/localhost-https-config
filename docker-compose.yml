@@ -4,7 +4,7 @@ services:
   nginx:
     restart: unless-stopped
     network_mode: bridge
-    image: nginx:latest
+    image: nginx:mainline-alpine
     ports:
       - 80:80
     volumes:
